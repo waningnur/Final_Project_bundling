@@ -5,12 +5,11 @@ import pandas as pd
 from itertools import combinations
 from collections import defaultdict
 from io import BytesIO,StringIO
-from PIL import image
+
 
 st.title('Cari Produk Yang Sering Dibeli Bersamaan')
 st.write("Tabel csv berisi ID_TRANSAKSI dan ITEMS")
-image = Image.open('D:/SEMESTER 3/Penambangan Data/FP_Data Mining/data.jpg')
-st.image(image, caption="Contoh Data CSV", use_column_width=True)
+
 
 
 
