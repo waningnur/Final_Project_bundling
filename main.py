@@ -5,7 +5,7 @@ import pandas as pd
 from itertools import combinations
 from collections import defaultdict
 from io import BytesIO,StringIO
-st.title('Cari Yang Sering Dibeli Bersamaan')
+st.title('Cari Produk Yang Sering Dibeli Bersamaan')
 
 
 
