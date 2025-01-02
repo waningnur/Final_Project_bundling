@@ -35,7 +35,7 @@ class FileUpload(object):
                 transactions = data['ITEMS'].tolist()
 
                 # Parameter
-                min_support = 0.1  # Minimum support (30%)
+                min_support = 0.01  # Minimum support (30%)
                 n_transactions = len(transactions)
 
                 # Fungsi untuk menghitung Frequent Itemsets
