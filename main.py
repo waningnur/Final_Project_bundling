@@ -17,6 +17,8 @@ class FileUpload(object):
 
     def run(self):
         st.info(_doc_)
+        file = st.file_uploader("upload file", type = self.FileTypes)
+        show_file = st.empty()
         if not file:
             show_file.info("Please upload a file of type : "+",".join(["csv"]))
             return
