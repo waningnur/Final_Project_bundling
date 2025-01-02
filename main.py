@@ -16,7 +16,7 @@ class FileUpload(object):
         self.FileTypes = ["csv"]
 
     def run(self):
-        st.info(_doc_)
+        st.info(__doc__)
         file = st.file_uploader("upload file", type = self.FileTypes)
         show_file = st.empty()
         if not file:
