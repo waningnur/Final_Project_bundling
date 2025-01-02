@@ -16,15 +16,13 @@ class FileUpload(object):
         self.FileTypes = ["csv"]
 
     def run(self):
-        st.info(__doc__)
-        file = st.file_uploader("upload file", type = self.FileTypes)
-        show_file = st.empty()
+        
         if not file:
             show_file.info("Please upload a file of type : "+",".join(["csv"]))
             return
         content = file.getvalue()
         if isinstance(file,BytesIO):
-          
+            if olah :
                 data = pd.read_csv(file, delimiter=';')
                 st.dataframe(data.head(10))
 
@@ -68,7 +66,7 @@ class FileUpload(object):
                 results_df = results_df.sort_values(by='Support', ascending=False)
 
                 # Menampilkan hasil dalam bentuk tabel
-                
+                st.write("Frequent Itemsets (Item yang sering dibeli bersama):  ", results_df)
                 
                 # Tampilkan hasil
                 
@@ -79,8 +77,8 @@ class FileUpload(object):
 
 olah = st.button ("Cari Bundling")
 
-if olah :
-    st.write("Frequent Itemsets (Item yang sering dibeli bersama):  ", results_df)
+
+    
 
 
 
