@@ -11,9 +11,6 @@ st.title('Cari Produk Yang Sering Dibeli Bersamaan')
 st.write("Tabel csv berisi ID_TRANSAKSI dan ITEMS")
 
 
-
-
-
 class FileUpload(object):
     def __init__(self):
         self.FileTypes = ["csv"]
@@ -27,7 +24,7 @@ class FileUpload(object):
             return
         content = file.getvalue()
         if isinstance(file,BytesIO):
-            if olah :
+          
                 data = pd.read_csv(file, delimiter=';')
                 st.dataframe(data.head(10))
 
@@ -71,7 +68,7 @@ class FileUpload(object):
                 results_df = results_df.sort_values(by='Support', ascending=False)
 
                 # Menampilkan hasil dalam bentuk tabel
-                st.write("Frequent Itemsets (Item yang sering dibeli bersama):  ", results_df)
+                
                 
                 # Tampilkan hasil
                 
@@ -81,6 +78,10 @@ class FileUpload(object):
         file.close()
 
 olah = st.button ("Cari Bundling")
+
+if olah :
+    st.write("Frequent Itemsets (Item yang sering dibeli bersama):  ", results_df)
+
 
 
 if __name__ == "__main__":
